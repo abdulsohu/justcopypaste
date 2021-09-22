@@ -1,0 +1,10 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+.title {
+    font-family: 'VT323', monospace;
+    font-size: 90px;
+}
+
+body {
+    padding: 1em;
+}
