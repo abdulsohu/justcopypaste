@@ -7,28 +7,252 @@
 
     <title>Just copy paste.</title>
 
-    <meta name="description" content="Copy paste resume items, simply."/>
+    <meta name="description" content="Copy paste resume items, simply." />
     <meta name="author" content="Abdul Sohu" />
     <meta property="og:title" content="Just copy paste." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content=""/>
-    <meta property="og:description" content="Copy paste resume items, simply."/>
+    <meta property="og:url" content="" />
+    <meta
+      property="og:description"
+      content="Copy paste resume items, simply."
+    />
     <meta property="og:image" content="apple-touch-icon.png" />
 
     <link rel="icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
     </style>
     <link rel="stylesheet" href="index.css" />
-    
+
     <script src="index.js"></script>
   </head>
 
   <body>
-      <p class="title">A little copy paste action.</p>
+    <nav class="navbar" role="navigation">
+      <div class="navbar-item">
+        <p class="title">Just copy paste.</p>
+      </div>
 
-      <p>Everyone hates having to fill out</p>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <input onclick="darkMode()" type="checkbox" id="toggle" />
+        </div>
+      </div>
+    </nav>
 
+    <p class="subtitle" style="padding: 1em">
+      I like to copy-paste things as quickly as possible. Copy-pasting is only
+      second to autofill. <br />
+      Sometimes, autofill makes you want to pull your hair out. So, copy pasting
+      is reliable.
+    </p>
+
+    <div class="columns" style="padding-left: 10px; padding-right: 10px">
+      <!-- First content column-->
+      <div class="column is-half">
+        <!-- Card for: SWE @ Penn-->
+        <div class="card block">
+          <header class="card-header">
+            <p id="swe" class="card-header-title">Software Engineer</p>
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <ion-icon
+                  name="copy-outline"
+                  onclick="copyElementText('swe')"
+                ></ion-icon>
+              </span>
+            </button>
+          </header>
+          <div class="card-content">
+            <div id="swe-bullets" class="content">
+              - Currently working on migrating services to the cloud, and
+              building applications for internal analytics.
+            </div>
+            <em
+              >Jul 2021 - Present &nbsp;
+              <ion-icon
+                name="clipboard-outline"
+                onclick="copyElementText('swe-bullets')"
+              ></ion-icon
+            ></em>
+          </div>
+        </div>
+
+        <!-- Card for: DS Intern -->
+        <div class="card block">
+          <header class="card-header">
+            <p id="dsi" class="card-header-title">Data Science Intern</p>
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <ion-icon
+                  name="copy-outline"
+                  onclick="copyElementText('dsi')"
+                ></ion-icon>
+              </span>
+            </button>
+          </header>
+          <div class="card-content">
+            <div id="dsi-bullets" class="content">
+              - Increased data cohesion by 50% for quantitative projects by
+              utilizing machine learning techniques.
+              <br />
+              <br />
+              - Validate available data through language modeling, and use
+              Selenium to web scrape over 300 online resources.
+              <br />
+              <br />
+              - Aggregate data points, and conduct sentiment detection for data
+              incoming from gjopen.com, a platform that aggregates content from
+              super-forecasters and leading experts in various fields.
+            </div>
+            <em
+              >Jun 2020 - Dec 2020 &nbsp;
+              <ion-icon
+                name="clipboard-outline"
+                onclick="copyElementText('dsi-bullets')"
+              ></ion-icon
+            ></em>
+          </div>
+        </div>
+
+        <!-- Card for: SWE Intern @ Penn-->
+        <div class="card block">
+          <header class="card-header">
+            <p id="swi" class="card-header-title">
+              Software Engineering Intern
+            </p>
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <ion-icon
+                  name="copy-outline"
+                  onclick="copyElementText('swi')"
+                ></ion-icon>
+              </span>
+            </button>
+          </header>
+          <div class="card-content">
+            <div id="swi-bullets" class="content">
+              - Redeveloped Penn Guides Android application and registered
+              series of complaints against Android indexing of the app: resulted
+              in more than 50% user increase for University of Pennsylvania’s
+              2019 New Student Orientation.
+              <br />
+              <br />
+              - Launched websites ‘Preceptorials.com’ and ‘Year of Civic
+              Engagement’ and reduced department costs by 500% in doing so.
+              <br />
+              <br />
+              - Refactored and released new website base HTML/CSS code to
+              resolve more than 700 ADA Compliance tokens.
+              <br />
+              <br />
+              - Organized and dispensed event timeline for orientation, and
+              enabled collaboration between more than 20 Penn departments.
+            </div>
+            <em
+              >May 2019 - Jun 2020 &nbsp;
+              <ion-icon
+                name="clipboard-outline"
+                onclick="copyElementText('swi-bullets')"
+              ></ion-icon
+            ></em>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second column -->
+      <div class="column is-half">
+        <!-- Card for: TA @ Penn-->
+        <div class="card block">
+          <header class="card-header">
+            <p id="ta" class="card-header-title">Teaching Assistant</p>
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <ion-icon
+                  name="copy-outline"
+                  onclick="copyElementText('ta')"
+                ></ion-icon>
+              </span>
+            </button>
+          </header>
+          <div class="card-content">
+            <div id="ta-bullets" class="content">
+              - Teach three classes at Penn: CIS 450/550 (Database & Information
+              Systems), CIT 582 (Blockchains & Crypto), and CIS 557 (Programming
+              for the Web).
+              <br />
+              <br />
+              - Triage 300+ students for core course on databases, the
+              blockchain space, and for a course dealing with holistic web
+              systems.
+              <br />
+              <br />
+              - Project manager for 20+ students, responsible for ensuring
+              project specifications are met and students are on track.
+            </div>
+            <em
+              >Jan 2021 - Present &nbsp;
+              <ion-icon
+                name="clipboard-outline"
+                onclick="copyElementText('ta-bullets')"
+              ></ion-icon
+            ></em>
+          </div>
+        </div>
+
+        <!-- Card for: -->
+        <div class="card block">
+          <header class="card-header">
+            <p id="web" class="card-header-title">
+              Web Developer &nbsp; <text class="tag">work-study</text>
+            </p>
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <ion-icon
+                  name="copy-outline"
+                  onclick="copyElementText('web')"
+                ></ion-icon>
+              </span>
+            </button>
+          </header>
+          <div class="card-content">
+            <div id="web-bullets" class="content">
+              - Interned at one of Philadelphia’s top performing arts venues to
+              improve web presence.
+              <br />
+              <br />
+              - Used SEO tactics for higher search index results: revenue up by
+              roughly $22,000 every year.
+              <br />
+              <br />
+              - Researched and suggested adoption of iModules for solutions:
+              click-through rates up by 15-25%.
+              <br />
+              <br />
+              - Renovated website, and worked closely with Events Coordinator to
+              maximize online presence and improve client data collection
+              submissions increased by more than 50%.
+            </div>
+            <em
+              >Sep 2017 - May 2019 &nbsp;
+              <ion-icon
+                name="clipboard-outline"
+                onclick="copyElementText('web-bullets')"
+              ></ion-icon
+            ></em>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

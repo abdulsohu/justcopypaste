@@ -1,10 +1,70 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+#prologue {
+  background-color: yellow;
+}
+
+html {
+  height: 100%;
+}
 
 .title {
-    font-family: 'VT323', monospace;
-    font-size: 90px;
+  font-family: "VT323", monospace;
+  font-size: 90px;
 }
 
 body {
-    padding: 1em;
+  height: 100%;
+  min-height: 100%;
+}
+
+.dark-mode,
+.dark-mode nav,
+.dark-mode .column {
+  background-color: #121212;
+  color: #dae2e2;
+  text-emphasis: 60%;
+}
+
+.dark-mode .title,
+.dark-mode .subtitle {
+  color: #dae2e2;
+  text-emphasis: 87%;
+}
+
+input {
+  width: 90px;
+  height: 40px;
+  background: #111;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+input:checked {
+  background: #fff;
+}
+
+input::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #ffbe76;
+  transform: translate(5px, 5px);
+  transition: 0.3s linear;
+}
+
+input:checked::after {
+  inset: unset;
+  background: transparent;
+  box-shadow: 10px 10px 0 #353b48;
+  transform: translate(calc(90px - 45px), -5px);
+}
+
+ion-icon:hover {
+  color: rgb(179, 179, 179);
+  cursor: pointer;
 }
